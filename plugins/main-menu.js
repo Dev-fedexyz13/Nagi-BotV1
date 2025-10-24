@@ -32,24 +32,22 @@ let handler = async (m, { conn, usedPrefix}) => {
 `.trim();
 
   const imagen = 'https://dev-fedeexyz.vercel.app/media/mbe6sl.jpg';
-const after = © ᴍᴀᴅᴇ ʙʏ ᴅᴇᴠ-ꜰᴇᴅᴇxʏᴢ;
+  const video = 'https://dev-fedeexyz.vercel.app/media/rsza4p.jpg';
+  const after = `© ᴍᴀᴅᴇ ʙʏ ᴅᴇᴠ-ꜰᴇᴅᴇxʏᴢ`;
 
-await m.react('⚽');
+  await m.react('⚽');
 
-const res = await axios.get(imagen, { responseType: 'arraybuffer' });
-const thumb = Buffer.from(res.data, 'binary');
-
-await conn.sendMessage(m.chat, {
-  image: { url: imagen },
-  caption: ${infoUser}\n\n${after},
-  contextInfo: {
-    externalAdReply: {
-      title: '© ᴍᴀᴅᴇ ʙʏ ᴅᴇᴠ-ꜰᴇᴅᴇxʏᴢ 🍂',
-      body: '⌬ NagiBot-IA 🍃',
-      thumbnail: thumb,
-      mediaType: 1,
-      renderLargerThumbnail: true,
-      sourceUrl: 'https://github.com/Dev-fedexyz13'
+  await conn.sendMessage(m.chat, {
+    image: { url: imagen },
+    caption: `${infoUser}\n\n${after}`,
+    contextInfo: {
+      externalAdReply: {
+        title: '© ᴍᴀᴅᴇ ʙʏ ᴅᴇᴠ-ꜰᴇᴅᴇxʏᴢ 🍂',
+        body: '⌬ NagiBot-IA 🍃',
+        thumbnailUrl: imagen,
+        mediaType: 1,
+        renderLargerThumbnail: true,
+        sourceUrl: 'https://github.com/Dev-fedexyz13'
 }
 },
     buttons: [
