@@ -31,7 +31,7 @@ let handler = async (m, { conn, usedPrefix}) => {
 > *_Plataforma:_* *Ubuntu*
 `.trim();
 
-  const imagen = 'https://kirito.my/media/images/95668416_k.jpg';
+  const imagen = 'https://dev-fedeexyz.vercel.app/media/mbe6sl.jpg';
   const video = 'https://files.catbox.moe/6zg54n.mp4';
   const after = `© ᴍᴀᴅᴇ ʙʏ ᴅᴇᴠ-ꜰᴇᴅᴇxʏᴢ`;
 
