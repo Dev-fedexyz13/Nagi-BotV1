@@ -500,7 +500,7 @@ console.log(await purgeOldFiles());
 console.log(chalk.bold.cyanBright(`\n╭» ❍ ARCHIVOS ❍\n│→ ARCHIVOS RESIDUALES ELIMINADAS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ⌫ ♻`))}, 1000 * 60 * 10)
 
 _quickTest()
-.then(() => conn.logger.info(chalk.greenBright.bold('🍃 INICIANDO BOT`)))
+.then(() => conn.logger.info(chalk.greenBright.bold('🍃 INICIANDO BOT')))
 .catch(console.error);
 
 setInterval(async () => {
