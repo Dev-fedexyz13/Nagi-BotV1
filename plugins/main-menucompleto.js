@@ -31,7 +31,7 @@ let handler = async (m, { conn, usedPrefix}) => {
     tools: 'ᴍᴇɴᴜ ᴛᴏᴏʟꜱ',
 };
 
-  let header = '*_□  %category_*';
+  let header = '*□ ﹙ *_`%category_`* ﹚';
   let body = '> ▪︎  *_%cmd_*';
   let footer = '';
   let after = `© ᴍᴀᴅᴇ ʙʏ ᴅᴇᴠ-ꜰᴇᴅᴇxʏᴢ`;
@@ -64,7 +64,7 @@ let handler = async (m, { conn, usedPrefix}) => {
 > *_Usuarios:_* *${totalreg}*
 > *_Plataforma:_* *Ubuntu*
 
-*_🍃 𝘾 𝙊 𝙈 𝘼 𝙉 𝘿 𝙊 𝙎_*
+*_L I S T A  -  M E N U_*
 `.trim();
 
   let commands = Object.values(global.plugins).filter(v => v.help && v.tags && v.command).map(v => ({
