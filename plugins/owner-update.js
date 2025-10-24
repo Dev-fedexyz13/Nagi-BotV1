@@ -6,9 +6,9 @@ const packname = '© 🄽🄰🄶🄸🄱🄾🅃‐🄼🄳';
 const redes = 'https://dev-fedexz.vercel.app';
 
 const iconos = [
-  'https://kirito.my/media/images/33437668_k.jpg',
-  'https://kirito.my/media/images/95668416_k.jpg',
-  'https://kirito.my/media/images/31336923_k.jpg',
+  'https://dev-fedeexyz.vercel.app/media/rsza4p.jpg',
+  'https://dev-fedeexyz.vercel.app/media/msyoyt.jpg',
+  'https://dev-fedeexyz.vercel.app/media/mbe6sl.jpg',
 ];
 
 const getRandomIcono = () => iconos[Math.floor(Math.random() * iconos.length)];
