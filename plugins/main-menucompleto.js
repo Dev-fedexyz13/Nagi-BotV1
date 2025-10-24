@@ -85,7 +85,7 @@ let handler = async (m, { conn, usedPrefix}) => {
 }
 
   let finalMenu = infoUser + '\n\n' + menu.join('\n\n') + '\n' + after;
-  let imagen = 'https://kirito.my/media/images/33437668_k.jpg';
+  let imagen = 'https://dev-fedeexyz.vercel.app/media/rsza4p.jpg';
 
   await m.react('🍃');
 
