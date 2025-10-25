@@ -21,8 +21,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
     return conn.reply(m.chat, '🍃 Registro eliminado con éxito.', m, global.rcanal);
 }
 
-  if (user.name && user.edad && user.fechaRegistro) {
-    return conn.reply(m.chat, '🌿 Ya estás registrado. Usa `.unreg` si deseas eliminar tu registro.', m, global.rcanal);
+  if (user.name && user.edad && user.fechaRegistro && nombre === user.name) {
+    return conn.reply(m.chat, '🌿 Ya estás registrado como *' + user.name + '*. Usa `.unreg` si deseas eliminar tu registro.', m, global.rcanal);
 }
 
   if (nombre &&!isNaN(edadSeleccionada)) {
@@ -106,8 +106,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
       hasMediaAttachment: true,
       imageMessage: media.imageMessage
 },
-    body: { text: beforeText},
-    footer: { text: "> ⌬ 𝙉𝙖𝙜𝙞-𝘽𝙤𝙩 • 𝙈𝙖𝙙𝙚 𝙗𝙮 𝘿𝙚𝙫-𝙛𝙚𝙙𝙚𝙭𝙮𝙯 "},
+body: { text: beforeText},
+    footer: { text: "> ⌬ 𝙉𝙖𝙜𝙞-𝘽𝙤𝙩 • 𝙈𝙖𝙙𝙚 𝙗𝙮 𝘿𝙚𝙫-𝙛𝙚𝙙𝙚𝙭𝙮𝙯 🍃"},
     nativeFlowMessage: {
       buttons: [
         {
