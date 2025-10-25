@@ -71,7 +71,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
   let muptime = clockString(_muptime);
   let totalreg = Object.keys(global.db.data.users).length;
 
-  const imageUrl = 'https://dev-fedeexyz.vercel.app/media/9a58sk.jpg';
+  const imageUrl = 'https://cdn.yupra.my.id/yp/g88ak3pd.jpg';
   let media = await prepareWAMessageMedia(
     { image: { url: imageUrl}},
     { upload: conn.waUploadToServer}
