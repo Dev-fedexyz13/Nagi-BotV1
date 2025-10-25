@@ -35,7 +35,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
 ┃ 🎂 *Edad:* ${edadSeleccionada} años
 ┃ 📅 *Fecha:* ${fecha}
 ┃
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+╰━━━━━━━━━━━━━━━━━━━━━╯
 `.trim();
 
     await m.react('🎉');
