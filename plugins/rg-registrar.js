@@ -3,20 +3,6 @@ import { join} from 'path'
 import { xpRange} from '../lib/levelling.js'
 import { prepareWAMessageMedia, generateWAMessageFromContent} from '@whiskeysockets/baileys'
 
-const defaultMenu = {
-  before: `
-╭━━━〔 Registro-Bot 〕━━━◉
-┃┃ 🐲𝐇𝐎𝐋𝐀, %name 🐲•
-┃╰──────────────
-┃┃Cʀᴇᴀᴅᴏ: Brayan/David
-┃┃Mᴏᴅᴏ: Público
-┃┃Bᴀɪʟᴇʏs: Multi Device
-┃┃Tɪᴇᴍᴘᴏ ᴀᴄᴛɪᴠᴏ: %muptime
-┃┃Usᴜᴀʀɪᴏs: %totalreg
-┃╰──────────────
-╰━━━━━━━━━━━━━━◉`.trim(),
-};
-
 let handler = async (m, { conn, usedPrefix: _p, args, __dirname}) => {
   const nombre = args[0];
   const edadSeleccionada = parseInt(args[1]);
@@ -44,13 +30,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname}) => {
 
   // Si solo se envió el nombre, mostrar menú de edades
   if (!nombre) {
-    return conn.reply(m.chat, `📌 Usa el comando así:\n${_p}reg <nombre>`, m);
+    return conn.reply(m.chat, `🍃 Usa el comando así:\n${_p}reg <nombre>`, m);
 }
 
-  let { exp, level, role} = global.db.data.users[m.sender];
-  let { min, xp, max} = xpRange(level, global.multiplier);
   let name = await conn.getName(m.sender);
-
   let _uptime = process.uptime() * 1000;
   let _muptime;
   if (process.send) {
@@ -89,23 +72,15 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname}) => {
     rows
 }];
 
-  let bodyText = `* 𝙏𝙐 𝙄𝙉𝙁𝙊 %name \n` +
-                 `   *𝐸𝑋𝑃:* %exp\n` +
-                 `   *𝑁𝐼𝑉𝐸𝐿:* %level\n` +
-                 `   *𝑅𝐴𝑁𝐆𝑂:* %role\n\n` +
-                 `*𝗘𝗟𝗜𝗝𝗘 𝗧𝗨 𝗘𝗗𝗔𝗗*\n𝗣𝗔𝗥𝗔 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗔𝗥 𝗘𝗟 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗢:`;
-
-  bodyText = bodyText.replace(/%name/g, name)
-.replace(/%exp/g, exp)
-.replace(/%level/g, level)
-.replace(/%role/g, role);
-
-  let beforeText = defaultMenu.before.replace(/%name/g, name)
-.replace(/%muptime/g, muptime)
-.replace(/%totalreg/g, totalreg)
-.replace(/%exp/g, exp)
-.replace(/%level/g, level)
-.replace(/%role/g, role);
+  const beforeText = `
+╭━━━〔 Registro-Bot 〕━━━
+> 🌿 Hola: ${nombre}
+> 📅 Fecha: ${new Date().toLocaleDateString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires'})}
+> 🕒 Tiempo activo: ${muptime}
+> 👥 Usuarios: ${totalreg}
+╰──────────────
+>📌 Selecciona tu edad abajo
+╰━━━━━━━━━━━━━━`.trim();
 
   const interactiveMessage = {
     header: {
@@ -113,8 +88,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname}) => {
       hasMediaAttachment: true,
       imageMessage: media.imageMessage
 },
- body: { text: `${beforeText}\n\n${bodyText}`},
-    footer: { text: "David Ryze / Brayan330"},
+    body: { text: beforeText},
+    footer: { text: "NagiBot-IA / Dev-fedexyz"},
     nativeFlowMessage: {
       buttons: [
         {
@@ -129,7 +104,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname}) => {
 }
 };
 
-  let msgi = generateWAMessageFromContent(
+  const msgi = generateWAMessageFromContent(
     m.chat,
     { viewOnceMessage: { message: { interactiveMessage}}},
     { userJid: conn.user.jid, quoted: m}
@@ -142,7 +117,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname}) => {
 
 handler.help = ['reg <nombre>'];
 handler.tags = ['rg'];
-handler.command = /^reg$/i;
+handler.command = /['reg'];
 handler.register = true;
 
 export default handler;
