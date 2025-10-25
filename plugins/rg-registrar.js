@@ -117,7 +117,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname}) => {
 
 handler.help = ['reg <nombre>'];
 handler.tags = ['rg'];
-handler.command = /['reg'];
+handler.command = ['reg'];
 handler.register = true;
 
 export default handler;
