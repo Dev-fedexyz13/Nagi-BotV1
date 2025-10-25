@@ -31,7 +31,7 @@ let handler = async (m, { conn, usedPrefix}) => {
 > *Plataforma:* Ubuntu
 `.trim();
 
-  const imagen = 'https://dev-fedeexyz.vercel.app/media/mbe6sl.jpg';
+  const imagen = 'https://cdn.yupra.my.id/yp/vtyd7h3h.jpg';
   const after = '© ᴍᴀᴅᴇ ʙʏ ᴅᴇᴠ-ꜰᴇᴅᴇxʏᴢ';
 
   await m.react('⚽');
