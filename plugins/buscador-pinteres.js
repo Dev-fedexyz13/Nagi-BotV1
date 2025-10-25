@@ -56,7 +56,6 @@ const handler = async (m, { conn, text, usedPrefix}) => {
 handler.help = ['pinterest <texto>']
 handler.command = ['pinterest', 'pin']
 handler.tags = ['buscador']
-handler.register= true
 handler.group = true
 
 export default handler
