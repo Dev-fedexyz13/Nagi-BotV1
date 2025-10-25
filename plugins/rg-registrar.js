@@ -12,7 +12,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
 
   if (command === 'unreg') {
     if (!user.name &&!user.edad) {
-      return conn.reply(m.chat, '🌿 No tienes ningún registro activo.', m, global.rcanal)
+      return conn.reply(m.chat, '❌ No tienes ningún registro activo.', m, global.rcanal)
 }
 
     user.name = ''
@@ -22,9 +22,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
     await m.react('🗑️')
     return conn.reply(m.chat, '🍃 Registro eliminado con éxito.', m, global.rcanal)
 }
-
-  if (user.name && user.edad && user.fechaRegistro && command === 'reg' &&!isNaN(edadSeleccionada) && nombre === user.name) {
-    return conn.reply(m.chat, `🌿 Ya estás registrado como *${user.name}*. Usa \`.unreg\` si deseas eliminar tu registro.`, m, global.rcanal)
+  if (user.name && user.edad && user.fechaRegistro && command === 'reg') {
+    await m.react('⚠️') 
+    return 
 }
 
   if (nombre &&!isNaN(edadSeleccionada)) {
@@ -129,8 +129,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
     { viewOnceMessage: { message: { interactiveMessage}}},
     { userJid: conn.user.jid, quoted: m}
 )
-
-  await conn.relayMessage(m.chat, msgi.message, { messageId: msgi.key.id})
+await conn.relayMessage(m.chat, msgi.message, { messageId: msgi.key.id})
   await m.react('✅')
 }
 
@@ -139,4 +138,4 @@ handler.tags = ['rg']
 handler.command = ['reg', 'unreg']
 handler.register = false
 
-export default handler;
+export default handler
