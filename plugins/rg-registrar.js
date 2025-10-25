@@ -98,7 +98,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
 ┃ 👥 *Usuarios registrados:* ${totalreg}
 ┃
 ┃ 🍃 Selecciona tu edad abajo.
-╰━━━━━━━━━━━━━━━━━━━━━━━`.trim();
+╰━━━━━━━━━━━━━━━━━━━━━━`.trim();
 
   // 📦 Construcción del mensaje interactivo
   const interactiveMessage = {
