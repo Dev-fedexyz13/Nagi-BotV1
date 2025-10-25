@@ -29,13 +29,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
     user.fechaRegistro = fecha;
 
     const mensaje = `
-╭━━━〔 ✅ REGISTRO EXITOSO 〕━━━╮
+╭━━〔 *_REGISTRO EXITOSO_* 〕━━╮
 ┃
-┃ 📛 *Nombre:* ${nombre}
-┃ 🎂 *Edad:* ${edadSeleccionada} años
-┃ 📅 *Fecha:* ${fecha}
+┃ 📛 *_Nombre:_* ${nombre}
+┃ 🎂 *_Edad:_* ${edadSeleccionada} años
+┃ 📅 *_Fecha:_* ${fecha}
 ┃
-╰━━━━━━━━━━━━━━━━━━━━━╯
+╰━━━━━━━━━━━━━━━━━━╯
 `.trim();
 
     await m.react('🎉');
@@ -86,19 +86,19 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
 }];
 
   const beforeText = `
-╭━━━〔 🌿 REGISTRO DE USUARIO 〕━━━
+╭━━〔 *_REGISTRO USUARIO_* 〕━━
 ┃
-┃ 👤 *Nombre:* ${nombre}
-┃ 📅 *Fecha:* ${new Date().toLocaleDateString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires'})}
-┃ 🕒 *Tiempo activo:* ${muptime}
-┃ 👥 *Usuarios registrados:* ${totalreg}
+┃ 👤 *_Nombre:_* ${nombre}
+┃ 📅 *_Fecha:_* ${new Date().toLocaleDateString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires'})}
+┃ 🕒 *_Tiempo activo:_* ${muptime}
+┃ 👥 *registrados:_* ${totalreg}
 ┃
-┃ 🍃 Selecciona tu edad abajo.
-╰━━━━━━━━━━━━━━━━━━━━`.trim();
+┃ 🍃 *_Selecciona tu edad abajo._*
+╰━━━━━━━━━━━━━━━━━━━`.trim();
 
   const interactiveMessage = {
     header: {
-      title: "🍃 Registro de Edad",
+      title: "🍃 *_Registro de Edad_*",
       hasMediaAttachment: true,
       imageMessage: media.imageMessage
 },
