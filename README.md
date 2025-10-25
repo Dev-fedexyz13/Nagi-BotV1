@@ -1,3 +1,5 @@
+> **Nagi-BotV1**
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&text=Nagi%20-%20Bot%20V1%20⚽&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/> 
 
 <p align="center">
