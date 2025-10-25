@@ -136,6 +136,5 @@ await conn.relayMessage(m.chat, msgi.message, { messageId: msgi.key.id})
 handler.help = ['reg <nombre>', 'unreg']
 handler.tags = ['rg']
 handler.command = ['reg', 'unreg']
-handler.register = false
 
 export default handler
