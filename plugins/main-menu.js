@@ -17,7 +17,7 @@ let handler = async (m, { conn, usedPrefix}) => {
 }
 
   const infoUser = `
-🍃 *_Hola, ${nombre}. Soy Nagi-BotV1._*
+🍃 *Hola, ${nombre}. Soy Nagi-BotV1.*
 
 🌿 *INFO USUARIO*
 > *Usuario:* ${nombre}
@@ -31,18 +31,20 @@ let handler = async (m, { conn, usedPrefix}) => {
 > *Plataforma:* Ubuntu
 `.trim();
 
-  const imagen = 'https://cdn.yupra.my.id/yp/vtyd7h3h.jpg';
+  const imagenPrincipal = 'https://cdn.yupra.my.id/yp/vtyd7h3h.jpg';
+  const imagenMiniatura = 'https://cdn.yupra.my.id/yp/g88ak3pd.jpg';
   const after = '© ᴍᴀᴅᴇ ʙʏ ᴅᴇᴠ-ꜰᴇᴅᴇxʏᴢ';
 
   await m.react('⚽');
 
   await conn.sendMessage(m.chat, {
-    image: { url: imagen},
+    image: { url: imagenPrincipal},
     caption: `${infoUser}\n\n${after}`,
     contextInfo: {
       externalAdReply: {
         title: after,
         body: '⌬ 🄽🄰🄶🄸🄱🄾🅃‐🄼🄳 🍃',
+        thumbnailUrl: imagenMiniatura, 
         mediaType: 1,
         renderLargerThumbnail: true,
         sourceUrl: 'https://github.com/Dev-fedexyz13'
