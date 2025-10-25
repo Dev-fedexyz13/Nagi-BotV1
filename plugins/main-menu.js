@@ -49,14 +49,13 @@ let handler = async (m, { conn, usedPrefix }) => {
         sourceUrl: 'https://github.com/Dev-fedexyz13'
       ,
     buttons: [
-      
         buttonId: `{usedPrefix}menucompleto`,
-        buttonText: { displayText: '🌿 ᴍᴇɴᴜ ᴄᴏᴍᴘʟᴇᴛᴏ' },
+        buttonText: { displayText: '🌿 ᴍᴇɴᴜ ᴄᴏᴍᴘʟᴇᴛᴏ'},
         type: 1
       },
       {
         buttonId: `${usedPrefix}reg Nagi-Bot.17`,
-        buttonText: { displayText: '🌿 ᴀᴜᴛᴏ ʀᴇɢɪꜱᴛʀᴏ' },
+        buttonText: { displayText: '🌿 ᴀᴜᴛᴏ ʀᴇɢɪꜱᴛʀᴏ'},
         type: 1
       }
     ]
