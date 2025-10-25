@@ -18,8 +18,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
     user.fechaRegistro = '';
 
     await m.react('🗑️');
-    return conn.reply(m.chat, '🍃 Registro eliminado.', m, global.rcanal);
+    return conn.reply(m.chat, '🍃 Registro eliminado con exito.', m, global.rcanal);
 }
+
   if (user.name && user.edad && command === 'reg') {
     return conn.reply(m.chat, '🌿 Ya estás registrado. Usa `.unreg` si deseas eliminar tu registro.', m, global.rcanal);
 }
@@ -129,7 +130,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
 
   await conn.relayMessage(m.chat, msgi.message, { messageId: msgi.key.id});
   await m.react('✅');
-  conn.reply(m.chat, '🍃 *_Selecciona tu edad._*', m, global.rcanal);
 };
 
 handler.help = ['reg <nombre>', 'unreg'];
