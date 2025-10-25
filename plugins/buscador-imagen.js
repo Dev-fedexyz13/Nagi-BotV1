@@ -39,6 +39,5 @@ const handler = async (m, { conn, text, usedPrefix, command}) => {
 handler.help = ['imagen']
 handler.tags = ['buscador']
 handler.command = ['img', 'imagen']
-handler.register = true
 
 export default handler
