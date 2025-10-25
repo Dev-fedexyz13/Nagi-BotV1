@@ -17,7 +17,7 @@ let handler = async (m, { conn, usedPrefix}) => {
 }
 
   const infoUser = `
-🍃 *Hola, ${nombre}. Soy Nagi-BotV1.*
+🍃 *_Hola, ${nombre}. Soy Nagi-BotV1._*
 
 🌿 *INFO USUARIO*
 > *Usuario:* ${nombre}
@@ -42,8 +42,7 @@ let handler = async (m, { conn, usedPrefix}) => {
     contextInfo: {
       externalAdReply: {
         title: after,
-        body: '⌬ NagiBot-IA 🍃',
-        thumbnailUrl: imagen,
+        body: '⌬ 🄽🄰🄶🄸🄱🄾🅃‐🄼🄳 🍃',
         mediaType: 1,
         renderLargerThumbnail: true,
         sourceUrl: 'https://github.com/Dev-fedexyz13'
