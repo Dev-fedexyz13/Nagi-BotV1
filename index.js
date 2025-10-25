@@ -126,12 +126,12 @@ if (methodCodeQR) {
 
 if (!methodCodeQR &&!methodCode &&!fs.existsSync(`./${Nagisessions}/creds.json`)) {
   do {
-    console.log(chalk.cyanBright('\n╓──────────────────────╗'));
+    console.log(chalk.cyanBright('\n╓───────────────────────╗'));
     console.log(chalk.whiteBright('║ 🍃  Método de conexión'));
     console.log(chalk.whiteBright('║'));
     console.log(chalk.whiteBright('║ 1. Código QR'));
     console.log(chalk.whiteBright('║ 2. Código de 8 digitos'));
-    console.log(chalk.cyanBright('╙──────────────────────╝'));
+    console.log(chalk.cyanBright('╙────────────────────────╝'));
 
     opcion = await question(
       chalk.cyanBright('\n🌿 Elige una opción (1 o 2): ') + chalk.bold.blueBright('→ ')
@@ -186,10 +186,10 @@ if (!fs.existsSync(`./${Nagisessions}/creds.json`)) {
         addNumber = phoneNumber.replace(/[^0-9]/g, '');
 } else {
         do {
-          console.log(chalk.cyanBright('\n╭───────────────'));
+          console.log(chalk.cyanBright('\n╭──────────────────'));
           console.log(chalk.whiteBright('│ 🍂  Ingrese su número de WhatsApp'));
-          console.log(chalk.whiteBright('│ ✏  Ejemplo: 54911×××××××'));
-          console.log(chalk.cyanBright('╰───────────────'));
+          console.log(chalk.whiteBright('│ ✏  Ejemplo: 5491156178758'));
+          console.log(chalk.cyanBright('╰──────────────────'));
 
           phoneNumber = await question(
             chalk.bgBlack(chalk.bold.magentaBright('→ '))
@@ -210,10 +210,10 @@ if (!fs.existsSync(`./${Nagisessions}/creds.json`)) {
           let codeBot = await conn.requestPairingCode(addNumber);
           codeBot = codeBot?.match(/.{1,4}/g)?.join('-') || codeBot;
 
-          console.log(chalk.greenBright('\n╭───────────────'));
+          console.log(chalk.greenBright('\n╭─────────────────'));
           console.log(chalk.whiteBright('│ 🍃  CODIGO GENERADO:'));
           console.log(chalk.whiteBright(`│ 🔐  ${chalk.bold.cyanBright(codeBot)}`));
-          console.log(chalk.greenBright('╰───────────────\n'));
+          console.log(chalk.greenBright('╰─────────────────\n'));
 }, 3000);
 }
 }
