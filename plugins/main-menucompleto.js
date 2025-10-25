@@ -32,7 +32,7 @@ let handler = async (m, { conn, usedPrefix}) => {
 };
 
   let header = '□ *﹙ _`%category`_ ﹚*';
-  let body = '> ㅤ۟ ⚽ .  *_%cmd_*';
+  let body = '>ㅤ۟ ▪︎ . *_%cmd_*';
   let footer = '';
   let after = `© ᴍᴀᴅᴇ ʙʏ ᴅᴇᴠ-ꜰᴇᴅᴇxʏᴢ`;
 
