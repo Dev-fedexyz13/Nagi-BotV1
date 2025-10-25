@@ -23,7 +23,7 @@ const handler = async (m, { conn}) => {
       buttonParamsJson: JSON.stringify({
         display_text: "🍃 Ver Repositorio",
         url: "https://github.com/Dev-fedexyz13/Nagi-BotV1.git",
-        merchant_url: "https://github.com/Dev-fedexyz13/Nagi-BotV1.git"
+        merchant_url: "https://github.com/Dev-fedexyz13/NagiBot-IA.git"
 })
 },
     {
