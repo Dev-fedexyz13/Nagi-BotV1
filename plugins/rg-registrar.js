@@ -3,32 +3,49 @@ import { join} from 'path'
 import { xpRange} from '../lib/levelling.js'
 import { prepareWAMessageMedia, generateWAMessageFromContent} from '@whiskeysockets/baileys'
 
-let handler = async (m, { conn, usedPrefix: _p, args, __dirname}) => {
+let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
   const nombre = args[0];
   const edadSeleccionada = parseInt(args[1]);
+  const user = global.db.data.users[m.sender];
 
-  // Si ya se envió nombre y edad, registrar directamente
+  if (command === 'unreg') {
+    if (!user.name &&!user.edad) {
+      return conn.reply(m.chat, '❌ No tienes ningún registro activo.', m);
+}
+
+    user.name = '';
+    user.edad = null;
+    user.fechaRegistro = '';
+
+    await m.react('🗑️');
+    return conn.reply(m.chat, '✅ Tu registro ha sido eliminado correctamente.', m);
+}
+
+  if (user.name && user.edad && command === 'reg') {
+    return conn.reply(m.chat, '⚠️ Ya estás registrado. Usa `.unreg` si deseas eliminar tu registro.', m);
+}
+
   if (nombre &&!isNaN(edadSeleccionada)) {
     const fecha = new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires'});
 
-    let user = global.db.data.users[m.sender];
     user.name = nombre;
     user.edad = edadSeleccionada;
     user.fechaRegistro = fecha;
 
     const mensaje = `
-✅ *Registro exitoso*
-
-📛 *Nombre:* ${nombre}
-🎂 *Edad:* ${edadSeleccionada} años
-📅 *Fecha:* ${fecha}
+╭━━━〔 ✅ REGISTRO EXITOSO 〕━━━╮
+┃
+┃ 📛 *Nombre:* ${nombre}
+┃ 🎂 *Edad:* ${edadSeleccionada} años
+┃ 📅 *Fecha:* ${fecha}
+┃
+╰━━━━━━━━━━━━━━━━━━━━━━━━╯
 `.trim();
 
     await m.react('🎉');
     return conn.reply(m.chat, mensaje, m);
 }
 
-  // Si solo se envió el nombre, mostrar menú de edades
   if (!nombre) {
     return conn.reply(m.chat, `🍃 Usa el comando así:\n${_p}reg <nombre>`, m);
 }
@@ -54,7 +71,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname}) => {
   let muptime = clockString(_muptime);
   let totalreg = Object.keys(global.db.data.users).length;
 
-  const imageUrl = 'https://files.catbox.moe/2eg7ex.jpg';
+  const imageUrl = 'https://dev-fedeexyz.vercel.app/media/9a58sk.jpg';
   let media = await prepareWAMessageMedia(
     { image: { url: imageUrl}},
     { upload: conn.waUploadToServer}
@@ -68,20 +85,22 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname}) => {
 }));
 
   const sections = [{
-    title: "Selecciona tu edad para registrarte",
+    title: "🌿 Selecciona tu edad para registrarte",
     rows
 }];
 
   const beforeText = `
-╭━━━〔 Registro-Bot 〕━━━
-> 🌿 Hola: ${nombre}
-> 📅 Fecha: ${new Date().toLocaleDateString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires'})}
-> 🕒 Tiempo activo: ${muptime}
-> 👥 Usuarios: ${totalreg}
-╰──────────────
->📌 Selecciona tu edad abajo
-╰━━━━━━━━━━━━━━`.trim();
+╭━━━〔 🌿 REGISTRO DE USUARIO 〕━━━
+┃
+┃ 👤 *Nombre:* ${nombre}
+┃ 📅 *Fecha:* ${new Date().toLocaleDateString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires'})}
+┃ 🕒 *Tiempo activo:* ${muptime}
+┃ 👥 *Usuarios registrados:* ${totalreg}
+┃
+┃ 📌 Selecciona tu edad abajo para completar el registro.
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`.trim();
 
+  // 📦 Construcción del mensaje interactivo
   const interactiveMessage = {
     header: {
       title: "Registro de Edad",
@@ -89,7 +108,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname}) => {
       imageMessage: media.imageMessage
 },
     body: { text: beforeText},
-    footer: { text: "NagiBot-IA / Dev-fedexyz"},
+    footer: { text: "> NagiBot-IA | Dev-fedexyz 🍃"},
     nativeFlowMessage: {
       buttons: [
         {
@@ -112,12 +131,12 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname}) => {
 
   await conn.relayMessage(m.chat, msgi.message, { messageId: msgi.key.id});
   await m.react('✅');
-  conn.reply(m.chat, '📋 Selecciona tu edad para completar el registro.', m);
+  conn.reply(m.chat, '🍃 *_Selecciona tu edad._*', m);
 };
 
-handler.help = ['reg <nombre>'];
+handler.help = ['reg <nombre>', 'unreg'];
 handler.tags = ['rg'];
-handler.command = ['reg'];
+handler.command = ['reg', 'unreg'];
 handler.register = true;
 
 export default handler;
