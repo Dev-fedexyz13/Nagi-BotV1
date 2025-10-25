@@ -6,7 +6,7 @@
 
 
 <p align="center">
-<a href="https://dev-fedeexyz.vercel.app/media/msyoyt.jpg"><img title="Author" src="https://img.shields.io/badge/Sylphiette-black?style=for-the-badge&logo=whatsApp"></a>
+<a href="https://dev-fedeexyz.vercel.app/media/msyoyt.jpg"><img title="Author" src="https://img.shields.io/badge/Dev-fedexyz-black?style=for-the-badge&logo=whatsApp"></a>
 <p/>
 
 
