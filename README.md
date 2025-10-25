@@ -1,9 +1,9 @@
-> **Nagi-BotV1**
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&text=Nagi%20-%20Bot%20V1%20⚽&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/> 
 
-<p align="center"> 
-<img src="https://dev-fedeexyz.vercel.app/media/9a58sk.jpg"/>
-<p/>
+<p align="center">
+  <img src="https://dev-fedeexyz.vercel.app/media/rsza4p.jpg" width="250" alt="Nagi-BotV1"/>
+</p>
+
 
 <p align="center">
 <a href="https://dev-fedeexyz.vercel.app/media/msyoyt.jpg"><img title="Author" src="https://img.shields.io/badge/Sylphiette-black?style=for-the-badge&logo=whatsApp"></a>
