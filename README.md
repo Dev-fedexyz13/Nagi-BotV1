@@ -2,21 +2,16 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&text=Nagi%20-%20Bot%20V1%20⚽&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/> 
 
-<p align="center">
-  <img src="https://dev-fedeexyz.vercel.app/media/rsza4p.jpg" width="250" alt="Nagi-BotV1"/>
-</p>
 
+<p align="center"><b>Dev-fedexyz</b></p>
 
 <div align="center">
-  
-[![WhatsApp](https://img.shields.io/badge/CHANNEL-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029VbBccU4545v2NVeKzN3U)
-
-[![WhatsApp](https://img.shields.io/badge/Support-2CA5E0?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5212431268546)
-
-[![WhatsApp](https://img.shields.io/badge/GROUP-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/BeFAyDGgDIR7e1kEkdFs8d)
-
-[![WhatsApp](https://img.shields.io/badge/Sylph-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/657574?text=Hola!+Fede) 
-
+  <a href="https://wa.me/5491156178758" target="_blank">
+    <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"/>
+  </a>
+  <a href="https://github.com/Dev-fedexyz" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
 </div>
 
 
