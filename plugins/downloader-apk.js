@@ -51,6 +51,5 @@ handler.tags = ['downloader'];
 handler.help = ['apkmod'];
 handler.command = ['apk', 'modapk', 'aptoide'];
 handler.group = true;
-handler.register = true;
 
 export default handler;
