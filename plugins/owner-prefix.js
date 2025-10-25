@@ -26,6 +26,5 @@ let handler = async (m, { conn, args, command}) => {
 handler.help = ['setprefix <prefijo>', 'delprefix']
 handler.tags = ['owner']
 handler.command = ['setprefix', 'delprefix']
-handler.rowner = true
 
 export default handler
