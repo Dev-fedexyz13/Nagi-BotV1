@@ -85,7 +85,7 @@ let handler = async (m, { conn, usedPrefix}) => {
 }
 
   let finalMenu = infoUser + '\n\n' + menu.join('\n\n') + '\n' + after;
-  let imagen = 'https://dev-fedeexyz.vercel.app/media/rsza4p.jpg';
+  let imagen = 'https://cdn.yupra.my.id/yp/vtyd7h3h.jpg';
 
   await m.react('🍃');
 
