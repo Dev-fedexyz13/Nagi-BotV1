@@ -5,11 +5,6 @@
 </p>
 
 
-<p align="center">
-<a href="https://dev-fedeexyz.vercel.app/media/msyoyt.jpg"><img title="Author" src="https://img.shields.io/badge/Dev-fedexyz-black?style=for-the-badge&logo=whatsApp"></a>
-<p/>
-
-
 <div align="center">
   
 [![WhatsApp](https://img.shields.io/badge/CHANNEL-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029VbBccU4545v2NVeKzN3U)
@@ -20,17 +15,13 @@
 
 [![WhatsApp](https://img.shields.io/badge/Sylph-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/657574?text=Hola!+Fede) 
 
-
 </div>
 
 
 <h3 align="center">WHATSAPP BOT</h3>
 
 
-***
-
 <p align="center">
 
 <a href="#"><img title="Nagi-BotV1" src="https://img.shields.io/badge/¡¡Gracias por usar a Nagi-BotV1!!-red?colorA=%255ff0000&colorB=%23017e40&Nagi=for-the-badge"></a> 
-
 </p>
