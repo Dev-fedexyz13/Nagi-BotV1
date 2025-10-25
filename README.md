@@ -21,7 +21,7 @@
 ¿Tienes dudas, sugerencias o quieres colaborar?
 
 - 📱 WhatsApp: Contactar al desarrollador
-- 💻 GitHub: Dev-fedexyz
+- 💻 Correo: (¡WhatsApp)fedeñanyt20@gmail.com 
 
 ---
 
