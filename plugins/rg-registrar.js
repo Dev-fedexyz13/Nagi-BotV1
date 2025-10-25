@@ -97,7 +97,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
 ┃ 🕒 *Tiempo activo:* ${muptime}
 ┃ 👥 *Usuarios registrados:* ${totalreg}
 ┃
-┃ 📌 Selecciona tu edad abajo para completar el registro.
+┃ 🍃 Selecciona tu edad abajo.
 ╰━━━━━━━━━━━━━━━━━━━━━━━`.trim();
 
   // 📦 Construcción del mensaje interactivo
