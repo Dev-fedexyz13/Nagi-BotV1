@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
 
   if (command === 'unreg') {
     if (!user.name &&!user.edad) {
-      return conn.reply(m.chat, '❌ No tienes ningún registro activo.', m);
+      return conn.reply(m.chat, '❌ No tienes ningún registro activo.', m, global.rcanal);
 }
 
     user.name = '';
@@ -18,11 +18,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
     user.fechaRegistro = '';
 
     await m.react('🗑️');
-    return conn.reply(m.chat, '✅ Tu registro ha sido eliminado correctamente.', m);
+    return conn.reply(m.chat, '🍃 Registro eliminado.', m, global.rcanal);
 }
-
   if (user.name && user.edad && command === 'reg') {
-    return conn.reply(m.chat, '⚠️ Ya estás registrado. Usa `.unreg` si deseas eliminar tu registro.', m);
+    return conn.reply(m.chat, '🌿 Ya estás registrado. Usa `.unreg` si deseas eliminar tu registro.', m, global.rcanal);
 }
 
   if (nombre &&!isNaN(edadSeleccionada)) {
@@ -39,15 +38,15 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
 ┃ 🎂 *Edad:* ${edadSeleccionada} años
 ┃ 📅 *Fecha:* ${fecha}
 ┃
-╰━━━━━━━━━━━━━━━━━━━━━━━━╯
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 `.trim();
 
     await m.react('🎉');
-    return conn.reply(m.chat, mensaje, m);
+    return conn.reply(m.chat, mensaje, m, global.rcanal);
 }
 
   if (!nombre) {
-    return conn.reply(m.chat, `🍃 Usa el comando así:\n${_p}reg <nombre>`, m);
+    return conn.reply(m.chat, `🍃 Usa el comando así:\n${_p}reg <nombre>`, m, global.rcanal);
 }
 
   let name = await conn.getName(m.sender);
@@ -100,18 +99,17 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
 ┃ 🍃 Selecciona tu edad abajo.
 ╰━━━━━━━━━━━━━━━━━━━━━━`.trim();
 
-  // 📦 Construcción del mensaje interactivo
   const interactiveMessage = {
     header: {
-      title: "Registro de Edad",
+      title: "🍃 Registro de Edad",
       hasMediaAttachment: true,
       imageMessage: media.imageMessage
 },
     body: { text: beforeText},
-    footer: { text: "> NagiBot-IA | Dev-fedexyz 🍃"},
+    footer: { text: "> ⌬ 𝙉𝙖𝙜𝙞-𝘽𝙤𝙩 • 𝙈𝙖𝙙𝙚 𝙗𝙮 𝘿𝙚𝙫-𝙛𝙚𝙙𝙚𝙭𝙮𝙯 "},
     nativeFlowMessage: {
       buttons: [
-        {
+      {
           name: "single_select",
           buttonParamsJson: JSON.stringify({
             title: "Elige tu edad",
@@ -131,7 +129,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
 
   await conn.relayMessage(m.chat, msgi.message, { messageId: msgi.key.id});
   await m.react('✅');
-  conn.reply(m.chat, '🍃 *_Selecciona tu edad._*', m);
+  conn.reply(m.chat, '🍃 *_Selecciona tu edad._*', m, global.rcanal);
 };
 
 handler.help = ['reg <nombre>', 'unreg'];
