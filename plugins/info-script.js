@@ -47,7 +47,7 @@ const handler = async (m, { conn}) => {
   await conn.sendMessage(
     m.chat,
     {
-      image: { url: "https://dev-fedeexyz.vercel.app/media/9a58sk.jpg"},
+      image: { url: "https://cdn.yupra.my.id/yp/vtyd7h3h.jpg"},
       caption,
       title: "⚽ Nagi-BotV1",
       footer: "© 2024 – Proyecto Nagi-BotV1",
