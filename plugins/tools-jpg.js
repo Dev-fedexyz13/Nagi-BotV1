@@ -28,7 +28,7 @@ let handler = async (m, { conn}) => {
 }
 };
 
-handler.command = /^\.fedejpg$/i;
+handler.command = ['fedejpg'];
 handler.help = ['fedejpg'];
 handler.tags = ['tools'];
 
