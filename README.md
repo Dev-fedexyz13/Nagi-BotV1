@@ -1,9 +1,8 @@
-> **Nagi-BotV1**
+> **⚽ Nagi-BotV1**
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&text=Nagi%20-%20Bot%20V1%20⚽&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/> 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&text=Nagi%20-%20Bot%20V1%20⚽&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/>
 
-
-<p align="center"><b>Dev-fedexyz</b></p>
+<p align="center"><strong>Desarrollado por <a href="https://github.com/Dev-fedexyz">Dev-fedexyz</a></strong></p>
 
 <div align="center">
   <a href="https://wa.me/5491156178758" target="_blank">
@@ -15,10 +14,17 @@
 </div>
 
 
-<h3 align="center">WHATSAPP BOT</h3>
+---
 
+> **📞 Contacto**
+
+¿Tienes dudas, sugerencias o quieres colaborar?
+
+- 📱 WhatsApp: Contactar al desarrollador
+- 💻 GitHub: Dev-fedexyz
+
+---
 
 <p align="center">
-
-<a href="#"><img title="Nagi-BotV1" src="https://img.shields.io/badge/¡¡Gracias por usar a Nagi-BotV1!!-red?colorA=%255ff0000&colorB=%23017e40&Nagi=for-the-badge"></a> 
+  <img title="¡Gracias por usar Nagi-BotV1!" src="https://img.shields.io/badge/¡¡Gracias por usar a Nagi-BotV1!!-red?colorA=%255ff0000&colorB=%23017e40&Nagi=for-the-badge">
 </p>
