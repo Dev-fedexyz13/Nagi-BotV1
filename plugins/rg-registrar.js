@@ -131,6 +131,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
 handler.help = ['reg <nombre>', 'unreg'];
 handler.tags = ['rg'];
 handler.command = ['reg', 'unreg'];
-handler.register = true;
+handler.register = false;
 
 export default handler;
