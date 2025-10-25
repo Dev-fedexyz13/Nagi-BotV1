@@ -1,5 +1,7 @@
 let handler = async (m, { conn, args, command}) => {
-  if (!global.owner.includes(m.sender)) {
+  const senderNumber = m.sender.split('@')[0] 
+
+  if (!global.owner.includes(senderNumber)) {
     return conn.reply(m.chat, '❌ Solo el *owner* puede usar este comando.', m)
 }
 
@@ -26,5 +28,6 @@ let handler = async (m, { conn, args, command}) => {
 handler.help = ['setprefix <prefijo>', 'delprefix']
 handler.tags = ['owner']
 handler.command = ['setprefix', 'delprefix']
+handler.rowner = true
 
 export default handler
