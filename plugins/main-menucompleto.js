@@ -56,7 +56,7 @@ let handler = async (m, { conn, usedPrefix}) => {
 *_🌿 𝙄𝙉𝙁𝙊 𝙐𝙎𝙐𝘼𝙍𝙄𝙊_*
 > *_Usuario:_* *${nombre}*
 > *_Premium:_* *${premium}*
-> *_Limite:_* *${limite}*
+> *_Bot:_* ${(conn.user.jid == global.conn.user.jid ? 'ᴘʀɪɴᴄɪᴘᴀʟ' : 'ꜱᴜʙ-ʙᴏᴛ')}
 
 *_🌿 𝘿𝘼𝙏𝙊𝙎 𝘿𝙀𝙇 𝘽𝙊𝙏_*
 > *_Grupos:_* *${groupsCount}*
