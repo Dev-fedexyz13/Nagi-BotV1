@@ -21,6 +21,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
     return conn.reply(m.chat, '🍃 Registro eliminado con éxito.', m, global.rcanal);
 }
 
+  if (user.name && user.edad && user.fechaRegistro) {
+    return conn.reply(m.chat, '🌿 Ya estás registrado. Usa `.unreg` si deseas eliminar tu registro.', m, global.rcanal);
+}
+
   if (nombre &&!isNaN(edadSeleccionada)) {
     const fecha = new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires'});
 
@@ -91,14 +95,14 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
 ┃ 👤 *_Nombre:_* ${nombre}
 ┃ 📅 *_Fecha:_* ${new Date().toLocaleDateString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires'})}
 ┃ 🕒 *_Tiempo activo:_* ${muptime}
-┃ 👥 *registrados:_* ${totalreg}
+┃ 👥 *_Registrados:_* ${totalreg}
 ┃
 ┃ 🍃 *_Selecciona tu edad abajo._*
 ╰━━━━━━━━━━━━━━━━━━━`.trim();
 
   const interactiveMessage = {
     header: {
-      title: "🍃 *_Registro de Edad_*",
+      title: "🍃 *_Registro de Edad._*",
       hasMediaAttachment: true,
       imageMessage: media.imageMessage
 },
@@ -112,8 +116,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, __dirname, command}) => {
             title: "Elige tu edad",
             sections
 })
-  }
-  ],
+}
+      ],
       messageParamsJson: ""
 }
 };
