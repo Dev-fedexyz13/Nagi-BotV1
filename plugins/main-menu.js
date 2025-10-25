@@ -32,7 +32,6 @@ let handler = async (m, { conn, usedPrefix}) => {
 `.trim();
 
   const imagen = 'https://dev-fedeexyz.vercel.app/media/mbe6sl.jpg';
-  const imagen = 'https://dev-fedeexyz.vercel.app/media/rsza4p.jpg';
   const after = `© ᴍᴀᴅᴇ ʙʏ ᴅᴇᴠ-ꜰᴇᴅᴇxʏᴢ`;
 
   await m.react('⚽');
